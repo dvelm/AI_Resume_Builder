@@ -1,0 +1,67 @@
+/* Work Experience Section Styles */
+/* Reset all margins and paddings for consistent spacing */
+#work-experience .entry {
+    margin: 0 0 var(--company-spacing, 0.5cm) 0 !important;
+    /* Revert padding reset - let theme handle entry padding */
+    /* padding: 0 !important; */
+}
+
+#work-experience .entry-header,
+#work-experience .entry-location {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+#work-experience .entry-header {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.5em !important;
+    align-items: baseline !important;
+}
+
+#work-experience .entry-location {
+    font-weight: normal !important;
+    color: inherit !important;
+}
+
+#work-experience .entry-details {
+    /* Reset theme's negative top margin */
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    /* Add padding-bottom for spacing below job title/dates */
+    margin-bottom: var(--job-title-bottom-spacing) !important;
+}
+
+#work-experience .entry-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    /* Explicitly set line-height to minimize vertical space */
+    line-height: 1 !important;
+    /* Add right margin to ensure space between position and employment_period */
+    margin-right: 0.5em !important;
+}
+
+#work-experience .compact-list {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-top: 0 !important; /* Ensure no top padding */
+    padding-left: 20px !important; /* Add consistent left padding for bullet points */
+    line-height: 1.2 !important;
+    position: relative !important; /* Ensure proper positioning */
+}
+
+/* Controls spacing between job description bullet points */
+#work-experience .compact-list li {
+    margin-top: 0 !important; /* Ensure no top margin on list items */
+    margin-bottom: var(--job-description-item-spacing, 0.2cm) !important;
+    padding: 0 !important;
+}
+
+/* Removes extra space after the last bullet point */
+#work-experience .compact-list li:last-child {
+    margin-bottom: 0 !important;
+}

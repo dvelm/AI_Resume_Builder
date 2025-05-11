@@ -1,0 +1,324 @@
+/*Modern Dark Blue$https://github.com/dvelm*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #1a2530;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 10pt;
+  background-color: #f5f7fa;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #1a56a0; /* Darker blue header */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28pt;
+  font-weight: 300; /* Thinner, more elegant font weight */
+  letter-spacing: 1.5px; /* Add letter spacing for elegance */
+  text-transform: uppercase; /* Optional: uppercase for more style */
+  margin: 0 0 10px 0;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 10pt;
+  font-weight: 500; /* Increased from 300 to 500 */
+  color: #ecf0f1;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.contact-info a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500; /* Bolder links */
+}
+
+.contact-info a:hover {
+  color: #d0e3f5;
+}
+
+.fab,
+.fas {
+  margin-right: 5px;
+}
+
+h2 {
+  font-size: 18pt;
+  font-weight: 700; /* Increased from 600 to 700 */
+  border-bottom: 3px solid #1a56a0; /* Thicker border with darker blue */
+  padding-bottom: 5px;
+  margin: 20px 0 15px 0;
+  color: #1a2530;
+}
+
+/* Ensure all section headers have the same style */
+#side-projects h2, #additional-skills h2 {
+  border-bottom: 3px solid #1a56a0; /* Ensure Projects and Additional Skills have the blue border */
+  color: #1a2530;
+}
+
+.entry {
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700; /* Increased from 600 to 700 */
+  color: #1a56a0; /* Darker blue */
+}
+
+.entry-name {
+  display: block; /* Changed from flex to block for better text wrapping */
+  font-weight: 700;
+  color: #1a56a0;
+  position: relative; /* For absolute positioning of the icon */
+  padding-left: 28px; /* Space for icon */
+}
+
+.entry-name i {
+  position: absolute; /* Take icon out of the flow */
+  left: 0; /* Align to the left edge */
+  top: 3px; /* Align with first line of text */
+  width: 16px; /* Fixed width for the icon */
+  text-align: center; /* Center the icon */
+}
+
+.entry-name a {
+  display: inline-block;
+  word-break: normal; /* Prevent breaking words */
+  white-space: normal; /* Allow wrapping */
+  text-decoration: underline; /* Ensure links are underlined */
+}
+
+.entry-details {
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  margin-bottom: 8px;
+  font-size: 9pt;
+  color: #5a6a77; /* Darker gray */
+  font-weight: 500; /* Added font weight */
+}
+
+.compact-list {
+  margin: 5px 0;
+  padding-left: 20px;
+}
+
+.compact-list li {
+  margin-bottom: 5px;
+  font-weight: 500; /* Added font weight to list items */
+}
+
+.project-description {
+  margin: 5px 0;
+  padding: 0 5px;
+}
+
+.project-description p {
+  margin-bottom: 8px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.project-link {
+  margin-bottom: 12px;
+}
+
+.project-point {
+  margin-bottom: 8px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: justify;
+  position: relative;
+  padding-left: 0; /* No indentation */
+}
+
+.project-description .compact-list {
+  margin: 10px 0;
+  padding-left: 20px;
+  list-style-type: disc; /* Ensure bullet points are displayed */
+}
+
+.project-description .compact-list li {
+  margin-bottom: 5px;
+  font-weight: 500;
+  line-height: 1.4;
+  display: list-item; /* Ensure list items are displayed as list items */
+  text-align: justify; /* Ensure text is justified */
+}
+
+.two-column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.two-column ul {
+  width: 48%;
+  margin: 0;
+  padding-left: 20px;
+}
+
+a {
+  color: #1a56a0; /* Darker blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500; /* Bolder links */
+}
+
+a:hover {
+  color: #0d3b7a; /* Even darker blue on hover */
+  text-decoration: underline;
+}
+
+@media print {
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 9pt;
+    background-color: #fff;
+  }
+
+  @page {
+    margin: 1cm;
+  }
+
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24pt;
+    font-weight: 300; /* Keep thin, elegant style in print */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 16pt;
+    font-weight: 700; /* Keep bold in print */
+  }
+
+  .contact-info {
+    font-size: 9pt;
+    font-weight: 500; /* Keep medium weight in print */
+  }
+
+  .entry-details {
+    font-size: 8pt;
+    font-weight: 500; /* Keep medium weight in print */
+  }
+
+  .compact-list {
+    padding-left: 15px;
+  }
+
+  .compact-list li {
+    font-weight: 500; /* Keep medium weight in print */
+  }
+
+  .project-description {
+    margin: 5px 0;
+    padding: 0;
+  }
+
+  .project-description p {
+    margin-bottom: 6px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  .project-link {
+    margin-bottom: 10px;
+  }
+
+  .project-point {
+    margin-bottom: 6px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: justify;
+    position: relative;
+    padding-left: 0;
+  }
+
+  .project-description .compact-list {
+    margin: 8px 0;
+    padding-left: 15px;
+    list-style-type: disc; /* Ensure bullet points are displayed */
+  }
+
+  .project-description .compact-list li {
+    margin-bottom: 4px;
+    font-weight: 500;
+    line-height: 1.3;
+    display: list-item; /* Ensure list items are displayed as list items */
+    text-align: justify; /* Ensure text is justified */
+  }
+
+  header {
+    box-shadow: none;
+    background-color: #1a56a0 !important; /* Ensure dark blue prints */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .entry {
+    box-shadow: none;
+    padding: 10px 0;
+  }
+
+  a {
+    font-weight: 500; /* Keep medium weight in print */
+    color: #1a56a0 !important; /* Ensure links print in dark blue */
+  }
+
+  .entry-name {
+    display: block;
+    position: relative;
+    padding-left: 28px; /* Space for icon */
+  }
+
+  .entry-name i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 16px;
+    text-align: center;
+  }
+
+  .entry-name a {
+    display: inline-block;
+    word-break: normal;
+    white-space: normal;
+    text-decoration: underline;
+  }
+}

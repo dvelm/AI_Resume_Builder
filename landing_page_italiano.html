@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder - Crea CV Professionali con l'IA</title>
+    <meta name="description" content="Crea curriculum vitae e lettere di presentazione professionali personalizzati con l'intelligenza artificiale in qualsiasi lingua">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #3f5ce8;
+            --accent-color: #ff6b6b;
+            --text-color: #ffffff;
+            --light-text: #d1d5ff;
+            --bg-color: #4a6bff;
+            --card-bg: #3f5ce8;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 35px 0 25px;
+            text-align: center;
+        }
+
+        .logo {
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            color: var(--light-text);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 30px 0 25px;
+            color: var(--text-color);
+            font-size: 1.5rem;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px;
+        }
+
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-right: 15px;
+            color: var(--light-text);
+            width: 40px;
+            text-align: center;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .feature-description {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .whatsapp-share {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            font-size: 1.8rem;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/dvelm/AI_Resume_Builder/main/assets/logo.png" alt="AI Resume Builder Logo">
+            </div>
+            <h1>AI Resume Builder</h1>
+            <p class="tagline">Crea CV e lettere di presentazione professionali con l'intelligenza artificiale</p>
+            <a href="https://github.com/dvelm/AI_Resume_Builder" class="cta-button">Scarica Gratis</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Perché Scegliere AI Resume Builder?</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="feature-content">
+                        <div class="feature-title">CV Personalizzati</div>
+                        <p class="feature-description">Genera curriculum vitae su misura per ogni offerta di lavoro, evidenziando le competenze più rilevanti.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <div class="feature-content">
+                        <div class="feature-title">Multilingue</div>
+                        <p class="feature-description">Crea documenti in qualsiasi lingua: italiano, inglese, spagnolo, francese, tedesco e molte altre.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="feature-content">
+                        <div class="feature-title">Lettere di Presentazione</div>
+                        <p class="feature-description">Genera lettere di presentazione personalizzate che catturano l'attenzione dei recruiter.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                    <div class="feature-content">
+                        <div class="feature-title">Stili Professionali</div>
+                        <p class="feature-description">Scegli tra vari stili professionali per il tuo curriculum e personalizza layout, font e margini.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <div class="feature-content">
+                        <div class="feature-title">Privacy Garantita</div>
+                        <p class="feature-description">Supporto per modelli LLM locali tramite Ollama, per mantenere i tuoi dati privati.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+                    <div class="feature-content">
+                        <div class="feature-title">Requisiti Minimi</div>
+                        <p class="feature-description">Ottimizzato per funzionare anche su computer con hardware modesto.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://github.com/dvelm/AI_Resume_Builder" class="cta-button">Inizia Ora - È Gratuito!</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 AI Resume Builder - Software Open Source</p>
+            <div class="social-links">
+                <a href="https://github.com/dvelm/AI_Resume_Builder" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="whatsapp://send?text=Crea%20CV%20e%20lettere%20di%20presentazione%20professionali%20con%20l'intelligenza%20artificiale!%20Scarica%20gratis:%20https://github.com/dvelm/AI_Resume_Builder" class="whatsapp-share">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Simple script to handle WhatsApp sharing
+        document.querySelector('.whatsapp-share').addEventListener('click', function(e) {
+            // You can customize the share text here
+            const shareText = "Crea CV e lettere di presentazione professionali con l'intelligenza artificiale! Scarica gratis: https://github.com/dvelm/AI_Resume_Builder";
+            const shareUrl = `whatsapp://send?text=${encodeURIComponent(shareText)}`;
+            window.open(shareUrl);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+# Job search preferences
+remote: true
+hybrid: true
+onsite: false
+
+# Experience level preferences
+experience_level:
+  internship: true
+  entry: true
+  associate: true
+  mid_senior_level: true
+  director: false
+  executive: false
+
+# Job types to consider
+job_types:
+  full_time: true
+  contract: true
+  part_time: true
+  temporary: true
+  internship: true
+  other: true
+  volunteer: true
+
+# Date filter for job postings
+date:
+  all_time: false
+  month: true
+  week: false
+  24_hours: false
+
+# Job titles/positions to search for
+positions:
+  - "Web Developer"
+  - "Frontend Developer"
+  - "Full Stack Developer"
+  - "Software Engineer"
+  - "JavaScript Developer"
+
+# Locations to search in
+locations:
+  - "Remote"
+  - "New York, NY"
+  - "San Francisco, CA"
+
+# Apply only once per company
+apply_once_at_company: true
+
+# Distance in miles (0 for no limit)
+distance: 0
+
+# Skills to highlight (used for job suitability scoring)
+skills:
+  - "JavaScript"
+  - "React"
+  - "Node.js"
+  - "HTML/CSS"
+  - "Python"
+  - "SQL"
+
+# Preferred companies (used for job suitability scoring)
+preferred_companies:
+  - "Google"
+  - "Microsoft"
+  - "Amazon"
+  - "Stripe"
+  - "Shopify"
+
+# Companies to avoid
+company_blacklist:
+  - "Scam Inc"
+  - "MLM Solutions"
+
+# Job titles to avoid
+title_blacklist:
+  - "Sales Representative"
+  - "Commission Only"
+  - "Unpaid Internship"
+
+# Locations to avoid
+location_blacklist:
+  - "Unreachable Location"
+
+# Application preferences
+application_preferences:
+  apply_weekends: false
+  apply_weekdays: true
+  max_daily_applications: 5
+  max_weekly_applications: 20
+  follow_up_days: 14

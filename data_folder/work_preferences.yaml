@@ -1,0 +1,58 @@
+remote: true
+hybrid: true
+onsite: false
+
+experience_level:
+  internship: true
+  entry: true
+  associate: true
+  mid_senior_level: true
+  director: false
+  executive: false
+
+job_types:
+  full_time: true
+  contract: true
+  part_time: true
+  temporary: true
+  internship: true
+  other: true
+  volunteer: true
+
+date:
+  all_time: false
+  month: true
+  week: false
+  24_hours: false
+
+positions:
+  - Software engineer
+  - junior developer
+  - front‑end developer
+  - backend developer
+  - full‑stack developer
+  - web designer
+  - UX/UI designer
+  - web app developer
+  - mobile app developer
+  - android developer
+  - iOS developer
+  - web developer
+  - data analyst
+
+locations:
+  - Italia
+
+apply_once_at_company: true
+
+distance: 0
+
+company_blacklist:
+  - word1
+
+title_blacklist:
+  - word1
+  - word2
+
+location_blacklist:
+  - word1

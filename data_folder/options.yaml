@@ -1,0 +1,127 @@
+# Resume Configuration Options
+# This file controls the appearance and structure of your resume
+# Modify the values below to customize your resume's appearance
+
+# Section order - define the display order of resume sections
+# You can reorder, add or remove sections as needed
+# The sections will appear in the resume in the exact order listed below
+#
+# Available sections:
+# - education: Educational background and qualifications
+# - work_experience: Professional work history
+# - certifications: Professional certifications and credentials
+# - languages: Language proficiency
+# - achievements: Notable accomplishments and awards
+# - projects: Personal or professional projects
+# - additional_skills: Technical and soft skills
+#
+# Common section orders:
+# 1. Traditional: education, work_experience, certifications, languages, achievements, projects, additional_skills
+# 2. Experience-first: work_experience, education, certifications, additional_skills, projects, achievements, languages
+# 3. Skills-focused: education, additional_skills, work_experience, projects, certifications, achievements, languages
+section_order:
+  - education        # Educational background and qualifications
+  - work_experience  # Professional work history
+  - certifications   # Professional certifications and credentials
+  - languages        # Language proficiency
+  - achievements     # Notable accomplishments and awards
+  - projects         # Personal or professional projects
+  - additional_skills # Technical and soft skills
+
+# Font sizes (in percentage relative to base size)
+# Increase values for larger text, decrease for smaller text
+font_sizes:
+  # Base font size controls the overall text size of the resume
+  # 100 = normal browser default size
+  # 110-120 = good for PDF export (slightly larger)
+  # 130+ = very large text (good for accessibility)
+  base: 100
+
+  # Body text size relative to base
+  # Usually keep at 100% of base size
+  body: 100
+
+  # Main heading (your name) size relative to base
+  # 180-200 = prominent display
+  # 150-170 = moderate emphasis
+  h1: 180
+
+  # Section headings size relative to base
+  # 150-170 = prominent headings
+  # 130-140 = moderate emphasis
+  h2: 150
+
+  # Paragraph text size relative to base
+  # Usually keep at 100% for readability
+  paragraph: 100
+
+  # Contact info size relative to base
+  # 110-120 = slightly emphasized
+  # 100 = same as normal text
+  contact_info: 110
+
+# Page margins (in cm)
+# Controls white space around the edges of the page
+margins:
+  # Top margin - space between the top of the page and content
+  # 0.3-0.5 = minimal margin (maximizes content space)
+  # 0.8-1.0 = standard margin
+  # 1.5+ = generous margin (more white space)
+  top: 0.3
+
+  # Right margin - space between the right edge and content
+  # 0.5-0.7 = minimal margin
+  # 0.8-1.0 = standard margin
+  # 1.5+ = generous margin
+  right: 0.8
+
+  # Bottom margin - space between the bottom of the page and content
+  # 0.5-0.7 = minimal margin
+  # 0.8-1.0 = standard margin
+  # 1.5+ = generous margin
+  bottom: 0.8
+
+  # Left margin - space between the left edge and content
+  # 0.5-0.7 = minimal margin
+  # 0.8-1.0 = standard margin
+  # 1.5+ = generous margin
+  left: 0.8
+
+# Spacing (in cm)
+# Controls vertical spacing between elements
+# Negative values will reduce space (elements overlap)
+spacing:
+  h1_top: 0.3           # Space above name (higher value = more space)
+  h2_top: 0.2           # Space above section headings (higher value = more space)
+  content_bottom: 0.4   # Space at bottom of content sections (higher value = more space)
+
+  # Space between job title and job description
+  # Controls the vertical space between the job title and the bullet points
+  # IMPORTANT: How this setting works:
+  # - SMALLER values (including negative) = LESS space between title and description
+  # - LARGER values = MORE space between title and description
+  # - Zero (0.0) = no spacing (titles and descriptions will touch)
+  # - Negative values can create overlap
+  # Recommended range: -0.2 to 1.0
+  # -0.2 = overlap (very compact)
+  # 0.0 = no spacing (titles and descriptions will touch)
+  # 0.3 = slight spacing
+  # 0.7 = moderate spacing
+  # 1.0 = larger spacing
+  job_title_bottom: 0.3
+
+  # Space between job description bullet points
+  # Controls vertical gap between items in lists
+  # Recommended range: 0.03 to 0.2
+  # 0.03 = minimal spacing (compact lists)
+  # 0.1 = normal spacing
+  # 0.2 = increased spacing (more readable but takes more space)
+  job_description_item: 0.03
+
+  # Space between company entries in work experience section
+  # Controls vertical gap between different jobs/companies
+  # Recommended range: 0.2 to 1.0
+  # 0.2 = minimal spacing (compact layout)
+  # 0.5 = normal spacing
+  # 1.0 = increased spacing (more separation between jobs)
+  company_spacing: 0.3

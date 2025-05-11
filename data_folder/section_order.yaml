@@ -1,0 +1,18 @@
+# Define the display order of resume sections.
+# List the section keys in the desired sequence.
+# Valid keys are:
+# - education
+# - work_experience
+# - projects
+# - achievements
+# - certifications
+# - languages
+# - additional_skills
+section_order:
+  - education
+  - work_experience
+  - certifications
+  - languages
+  - achievements
+  - projects
+  - additional_skills
