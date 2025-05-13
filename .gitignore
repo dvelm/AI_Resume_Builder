@@ -51,5 +51,4 @@ log/*
 *.json
 
 data_folder/plain_text_resume.yaml
-data_folder/plain_text_resume.yaml
 config.py
