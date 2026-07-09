@@ -1,141 +1,79 @@
+# ============================================================================
+# plain_text_resume.yaml  —  COMPLETE FIELD REFERENCE
+# ----------------------------------------------------------------------------
+# This file is the SINGLE input file for your resume content.
+# All fields below are OPTIONAL. Include only what is relevant to you:
+#   - omit a section/field entirely, or
+#   - comment it out (prefix the line with '#'), or
+#   - set it to an empty string "" or to null.
+# The software adapts to whatever you provide: missing sections are left out
+# of the generated resume, and unrecognized fields are safely ignored.
+#
+# NOTE: use `interests` (not `additional_skills`) for the list of extra
+# skills/interests below. `additional_skills` is only a layout keyword used
+# in `data_folder/options.yaml` to control the rendered "Additional Skills"
+# section (which is built from each experience's `skills_acquired`).
+# ============================================================================
+
 personal_information:
-  name: "solid"
-  surname: "snake"
-  date_of_birth: "12/01/1861"
-  country: "Ireland"
-  city: "Dublin"
-  zip_code: "520123"
-  address: "12 Fox road"
-  phone_prefix: "+1"
-  phone: "7819117091"
-  email: "hi@gmail.com"
-  github: "https://github.com/lol"
-  linkedin: "https://www.linkedin.com/in/thezucc/"
-  
+  name: "John"                            # First name
+  surname: "Doe"                          # Last name
+  date_of_birth: "01/01/1990"             # Date of birth, DD/MM/YYYY
+  country: "United States"                # Country of residence
+  city: "New York"                        # City of residence
+  zip_code: "10001"                       # Postal/zip code (5-10 characters)
+  address: "123 Main St"                  # Street address (optional)
+  phone_prefix: "+1"                      # Country calling code, include '+'
+  phone: "5551234567"                     # Phone number, no spaces or dashes
+  email: "john.doe@example.com"           # Valid email address
+  github: "https://github.com/johndoe"    # Full URL to GitHub profile
+  linkedin: "https://www.linkedin.com/in/johndoe/"  # Full URL to LinkedIn profile
 
-education_details:
-  - education_level: "Master's Degree"
-    institution: "Bob academy"
-    field_of_study: "Bobs Engineering"
-    final_evaluation_grade: "4.0"
-    year_of_completion: "2023"
-    start_date: "2022"
-    additional_info:
-      exam:
-        Algorithms: "A"
-        Linear Algebra: "A"
-        Database Systems: "A"
-        Operating Systems: "A-"
-        Web Development: "A"
+education_details:                        # List of degrees / certifications
+  - education_level: "Bachelor's Degree"  # Type of degree or certification
+    institution: "University Name"        # School, college, or university
+    field_of_study: "Computer Science"    # Major or area of study
+    final_evaluation_grade: "3.8 GPA"     # Final grade or GPA
+    start_date: "2016"                    # Year you started
+    year_of_completion: 2020              # Year you completed (number)
+    location: "New York, NY"              # Institution location (optional)
+    country: "United States"              # Institution country (optional)
 
-experience_details:
-  - position: "X"
-    company: "Y."
-    employment_period: "06/2019 - Present"
-    location: "San Francisco, CA"
-    industry: "Technology"
-    key_responsibilities:
+experience_details:                       # List of work experiences
+  - position: "Software Engineer"         # Your job title
+    company: "Tech Company Inc."          # Company name
+    employment_period: "06/2020 - Present" # Period, MM/YYYY - MM/YYYY
+    location: "New York, NY"              # Job location
+    industry: "Technology"                # Industry sector
+    key_responsibilities:                 # List of responsibilities
       - responsibility: "Developed web applications using React and Node.js"
-      - responsibility: "Collaborated with cross-functional teams to design and implement new features"
-      - responsibility: "Troubleshot and resolved complex software issues"
-    skills_acquired:
+      - responsibility: "Collaborated with cross-functional teams"
+      # A plain string also works:
+      # - "Troubleshot and resolved complex software issues"
+    skills_acquired:                      # Skills gained/used in this role
       - "React"
       - "Node.js"
-      - "Software Troubleshooting"
-  - position: "Software Developer"
-    company: "Innovatech"
-    employment_period: "06/2015 - 12/2017"
-    location: "Milan, Italy"
-    industry: "Technology"
-    key_responsibilities:
-      - responsibility: "Developed and maintained web applications using modern technologies"
-      - responsibility: "Collaborated with UX/UI designers to enhance user experience"
-      - responsibility: "Implemented automated testing procedures to ensure code quality"
-    skills_acquired:
-      - "Web development"
-      - "User experience design"
-      - "Automated testing"
-  - position: "Junior Developer"
-    company: "StartUp Hub"
-    employment_period: "01/2014 - 05/2015"
-    location: "Florence, Italy"
-    industry: "Startups"
-    key_responsibilities:
-      - responsibility: "Assisted in the development of mobile applications and web platforms"
-      - responsibility: "Participated in code reviews and contributed to software design discussions"
-      - responsibility: "Resolved bugs and implemented feature enhancements"
-    skills_acquired:
-      - "Mobile app development"
-      - "Code reviews"
-      - "Bug fixing"
-projects:
-  - name: "X"
-    description: "Y blah blah blah "
-    link: "https://github.com/haveagoodday"
+      - "Team Collaboration"
 
+projects:                                 # List of projects (optional)
+  - name: "E-commerce Platform"           # Project name
+    description: "Built a full-stack e-commerce platform with React and Node.js"
+    link: "https://github.com/johndoe/ecommerce"  # Link to project (optional)
 
+achievements:                             # Notable accomplishments (optional)
+  - name: "Hackathon Winner"              # Achievement name
+    description: "Won first place in a national coding competition"
 
-achievements:
-  - name: "Employee of the Month"
-    description: "Recognized for exceptional performance and contributions to the team."
-  - name: "Hackathon Winner"
-    description: "Won first place in a national hackathon competition."
+certifications:                           # Professional certifications (optional)
+  - name: "AWS Certified Solutions Architect"  # Certification name
+    description: "Professional certification for AWS architecture"
 
-certifications:
-  - name: "Certified Scrum Master"
-    description: "Recognized certification for proficiency in Agile methodologies and Scrum framework."
-  - name: "AWS Certified Solutions Architect"
-    description: "Certification demonstrating expertise in designing, deploying, and managing applications on AWS."
+languages:                                # Languages you speak (optional)
+  - language: "English"                   # Language name
+    proficiency: "Native"                 # Proficiency level
 
-languages:
-  - language: "English"
-    proficiency: "Fluent"
-  - language: "Spanish"
-    proficiency: "Intermediate"
-
-interests:
-  - "Machine Learning"
-  - "Cybersecurity"
-  - "Open Source Projects"
-  - "Digital Marketing"
-  - "Entrepreneurship"
-
-availability:
-  notice_period: "2 weeks"
-
-salary_expectations:
-  salary_range_usd: "90000 - 110000"
-
-self_identification:
-  gender: "Female"
-  pronouns: "She/Her"
-  veteran: "No"
-  disability: "No"
-  ethnicity: "Asian"
-
-legal_authorization:
-  eu_work_authorization: "Yes"
-  us_work_authorization: "Yes"
-  requires_us_visa: "No"
-  requires_us_sponsorship: "Yes"
-  requires_eu_visa: "No"
-  legally_allowed_to_work_in_eu: "Yes"
-  legally_allowed_to_work_in_us: "Yes"
-  requires_eu_sponsorship: "No"
-  canada_work_authorization: "Yes"
-  requires_canada_visa: "No"
-  legally_allowed_to_work_in_canada: "Yes"
-  requires_canada_sponsorship: "No"
-  uk_work_authorization: "Yes"
-  requires_uk_visa: "No"
-  legally_allowed_to_work_in_uk: "Yes"
-  requires_uk_sponsorship: "No"
-
-
-work_preferences:
-  remote_work: "Yes"
-  in_person_work: "Yes"
-  open_to_relocation: "Yes"
-  willing_to_complete_assessments: "Yes"
-  willing_to_undergo_drug_tests: "Yes"
-  willing_to_undergo_background_checks: "Yes"
+interests:                                # Extra skills / interests (optional)
+  - "JavaScript"
+  - "Python"
+  - "Problem Solving"
+  - "Communication"

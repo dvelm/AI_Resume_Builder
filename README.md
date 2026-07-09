@@ -175,17 +175,15 @@ All configuration files should be placed in the `data_folder` directory:
      # address: "123 Main St"                        # Your street address (commented out to exclude)
 
    education_details:                                # List of your educational qualifications
-     - education_level: "Bachelor's Degree"          # Type of degree or certification
-       institution: "University Name"                # Name of the school, college, or university
-       field_of_study: "Computer Science"            # Your major or area of study
-       final_evaluation_grade: "3.8 GPA"             # Your final grade or GPA
-       year_of_completion: "2020"                    # Year you completed this education
-       start_date: "2016"                            # Year you started this education
-       # thesis: ""                                  # Thesis title if applicable (empty to exclude)
-       additional_info:                              # Optional additional information
-         exam:                                       # List of key courses and grades
-           "Algorithms": "A"                         # Course name and grade
-           "Database Systems": "A-"                  # Course name and grade
+     - education_level: "Bachelor's Degree"           # Type of degree or certification
+       institution: "University Name"                 # Name of the school, college, or university
+       field_of_study: "Computer Science"             # Your major or area of study
+       final_evaluation_grade: "3.8 GPA"              # Your final grade or GPA
+       year_of_completion: 2020                       # Year you completed this education (number)
+       start_date: "2016"                             # Year you started this education
+       location: "New York, NY"                       # Institution location (optional)
+       country: "United States"                       # Institution country (optional)
+
 
    experience_details:                               # List of your work experiences
      - position: "Software Engineer"                 # Your job title
@@ -218,12 +216,17 @@ All configuration files should be placed in the `data_folder` directory:
      - name: "Hackathon Winner"                      # Achievement name
        description: "Won first place in a national coding competition"
 
-   additional_skills:                                # Additional technical or soft skills
+   interests:                                         # Additional technical or soft skills / interests
      - "JavaScript"
      - "Python"
      - "Problem Solving"
      - "Communication"
-   ```
+    ```
+
+    > **All fields above are optional.** Include only the sections and fields relevant to you — the software adapts to whatever you provide. Omitted sections are left out of the generated resume, and any unrecognized fields are safely ignored.
+    >
+    > Use `interests` (not `additional_skills`) for the list of extra skills here. `additional_skills` is only a layout keyword used in `data_folder/options.yaml` to control the rendered "Additional Skills" section (which is built from each experience's `skills_acquired`).
+
 
    **Excluding Information**: There are several ways to exclude information from your resume:
 
@@ -234,7 +237,7 @@ All configuration files should be placed in the `data_folder` directory:
 
    2. **Empty fields**: Leave a field empty or set it to an empty string
       ```yaml
-      thesis: "" # This empty field will not appear in the resume
+       address: "" # This empty field will not appear in the resume
       ```
 
    3. **Null values**: Set a field to `null` to exclude it
@@ -246,71 +249,53 @@ All configuration files should be placed in the `data_folder` directory:
    This file contains your job search preferences for the automated job application feature. It helps the AI understand what kinds of jobs to look for.
 
    Example structure with explanations for each field:
-   ```yaml
-   # Job search preferences - types of work arrangements you're interested in
-   remote: true                # Set to true if you want remote jobs
-   hybrid: true                # Set to true if you want hybrid (part remote, part office) jobs
-   onsite: false               # Set to true if you want fully in-office jobs
+    ```yaml
+    # Job search preferences - types of work arrangements you're interested in
+    remote: true                # Set to true if you want remote jobs
 
-   # Experience level preferences - what career stages you're targeting
-   experience_level:
-     internship: true          # Entry-level temporary positions for students/recent graduates
-     entry: true               # Positions for people with 0-2 years of experience
-     associate: true           # Positions for people with 2-4 years of experience
-     mid_senior_level: true    # Positions for people with 5+ years of experience
-     director: false           # Management positions overseeing departments/teams
-     executive: false          # C-level and other top leadership positions
+    # Experience level preferences - what career stages you're targeting
+    experience_level:
+      internship: true          # Entry-level temporary positions for students/recent graduates
+      entry: true               # Positions for people with 0-2 years of experience
+      associate: true           # Positions for people with 2-4 years of experience
+      mid_senior_level: true    # Positions for people with 5+ years of experience
+      director: false           # Management positions overseeing departments/teams
+      executive: false          # C-level and other top leadership positions
 
-   # Job types to consider - employment arrangements you're open to
-   job_types:
-     full_time: true           # Standard full-time employment
-     contract: true            # Fixed-term contract work
-     part_time: true           # Part-time employment
-     temporary: true           # Short-term temporary positions
-     internship: true          # Formal internship programs
-     other: true               # Other non-standard arrangements
-     volunteer: true           # Unpaid volunteer positions
+    # Date filter for job postings - how recent the job listings should be
+    date:
+      all_time: false           # Any job posting regardless of when it was posted
+      month: true               # Jobs posted within the last month
+      week: false               # Jobs posted within the last week
+      24_hours: false           # Jobs posted within the last 24 hours
 
-   # Date filter for job postings - how recent the job listings should be
-   date:
-     all_time: false           # Any job posting regardless of when it was posted
-     month: true               # Jobs posted within the last month
-     week: false               # Jobs posted within the last week
-     24_hours: false           # Jobs posted within the last 24 hours
+    # Job titles/positions to search for - specific roles you're interested in
+    positions:
+      - "Software Engineer"     # List each job title you want to search for
+      - "Frontend Developer"
+      - "Full Stack Developer"
+      - "Web Developer"
 
-   # Job titles/positions to search for - specific roles you're interested in
-   positions:
-     - "Software Engineer"     # List each job title you want to search for
-     - "Frontend Developer"
-     - "Full Stack Developer"
-     - "Web Developer"
+    # Locations to search in - where you want to work
+    locations:
+      - "Remote"                # For fully remote positions
+      - "New York, NY"          # City and state/province
+      - "San Francisco, CA"     # Add as many locations as needed
 
-   # Locations to search in - where you want to work
-   locations:
-     - "Remote"                # For fully remote positions
-     - "New York, NY"          # City and state/province
-     - "San Francisco, CA"     # Add as many locations as needed
+    # Companies to avoid - blacklist of companies you don't want to apply to
+    company_blacklist:
+      - "Scam Inc"              # Companies you want to exclude from your search
+      - "MLM Solutions"
 
-   # Apply only once per company - prevents multiple applications to the same company
-   apply_once_at_company: true # Set to false if you want to apply to multiple positions at the same company
+    # Job titles to avoid - blacklist of job titles you don't want to apply for
+    title_blacklist:
+      - "Sales Representative"  # Job titles you want to exclude from your search
+      - "Commission Only"
 
-   # Distance in miles (0 for no limit) - how far you're willing to commute
-   distance: 0                 # Maximum commute distance in miles (0 = no limit)
-
-   # Companies to avoid - blacklist of companies you don't want to apply to
-   company_blacklist:
-     - "Scam Inc"              # Companies you want to exclude from your search
-     - "MLM Solutions"
-
-   # Job titles to avoid - blacklist of job titles you don't want to apply for
-   title_blacklist:
-     - "Sales Representative"  # Job titles you want to exclude from your search
-     - "Commission Only"
-
-   # Locations to avoid - blacklist of locations you don't want to work in
-   location_blacklist:
-     - "Unreachable Location"  # Locations you want to exclude from your search
-   ```
+    # Locations to avoid - blacklist of locations you don't want to work in
+    location_blacklist:
+      - "Unreachable Location"  # Locations you want to exclude from your search
+    ```
 
 ### LLM Configuration
 
@@ -595,17 +580,15 @@ Tutti i file di configurazione devono essere posizionati nella directory `data_f
      # address: "Via Roma 123"                       # Il tuo indirizzo (commentato per escluderlo)
 
    education_details:                                # Elenco delle tue qualifiche educative
-     - education_level: "Laurea Triennale"           # Tipo di laurea o certificazione
-       institution: "Nome Università"                # Nome della scuola, college o università
-       field_of_study: "Informatica"                 # La tua specializzazione o area di studio
-       final_evaluation_grade: "110/110"             # Il tuo voto finale
-       year_of_completion: "2020"                    # Anno in cui hai completato questo percorso di studi
-       start_date: "2017"                            # Anno in cui hai iniziato questo percorso di studi
-       # tesi: ""                                    # Titolo della tesi se applicabile (vuoto per escluderlo)
-       additional_info:                              # Informazioni aggiuntive opzionali
-         exam:                                       # Elenco di corsi chiave e voti
-           "Algoritmi": "30"                         # Nome del corso e voto
-           "Sistemi di Database": "28"               # Nome del corso e voto
+     - education_level: "Laurea Triennale"            # Tipo di laurea o certificazione
+       institution: "Nome Università"                 # Nome della scuola, college o università
+       field_of_study: "Informatica"                  # La tua specializzazione o area di studio
+       final_evaluation_grade: "110/110"              # Il tuo voto finale
+       year_of_completion: 2020                       # Anno in cui hai completato questo percorso di studi (numero)
+       start_date: "2017"                             # Anno in cui hai iniziato questo percorso di studi
+       location: "Roma, Italia"                       # Località dell'istituzione (opzionale)
+       country: "Italia"                             # Paese dell'istituzione (opzionale)
+
 
    experience_details:                               # Elenco delle tue esperienze lavorative
      - position: "Sviluppatore Software"             # Il tuo titolo lavorativo
@@ -638,12 +621,17 @@ Tutti i file di configurazione devono essere posizionati nella directory `data_f
      - name: "Vincitore Hackathon"                   # Nome del risultato
        description: "Primo posto in una competizione nazionale di programmazione"
 
-   additional_skills:                                # Competenze tecniche o soft aggiuntive
+   interests:                                         # Competenze tecniche o soft aggiuntive / interessi
      - "JavaScript"
      - "Python"
      - "Problem Solving"
      - "Comunicazione"
-   ```
+    ```
+
+    > **Tutti i campi precedenti sono opzionali.** Inserisci solo le sezioni e i campi pertinenti — il software si adatta a quanto fornito. Le sezioni omesse vengono escluse dal curriculum generato e i campi non riconosciuti vengono ignorati in sicurezza.
+    >
+    > Usa `interests` (non `additional_skills`) per l'elenco delle competenze extra qui. `additional_skills` è solo una parola chiave di layout usata in `data_folder/options.yaml` per controllare la sezione "Competenze Aggiuntive" (costruita a partire da `skills_acquired` di ogni esperienza).
+
 
    **Escludere Informazioni**: Ci sono diversi modi per escludere informazioni dal tuo curriculum:
 
@@ -654,7 +642,7 @@ Tutti i file di configurazione devono essere posizionati nella directory `data_f
 
    2. **Campi vuoti**: Lascia un campo vuoto o impostalo come stringa vuota
       ```yaml
-      tesi: "" # Questo campo vuoto non apparirà nel curriculum
+       address: "" # Questo campo vuoto non apparirà nel curriculum
       ```
 
    3. **Valori nulli**: Imposta un campo a `null` per escluderlo
@@ -666,71 +654,53 @@ Tutti i file di configurazione devono essere posizionati nella directory `data_f
    Questo file contiene le tue preferenze di ricerca lavoro per la funzionalità di candidatura automatica. Aiuta l'IA a capire che tipo di lavori cercare.
 
    Esempio di struttura con spiegazioni per ogni campo:
-   ```yaml
-   # Preferenze di modalità di lavoro - tipi di accordi lavorativi che ti interessano
-   remote: true                # Imposta su true se vuoi lavori remoti
-   hybrid: true                # Imposta su true se vuoi lavori ibridi (parte remoto, parte ufficio)
-   onsite: false               # Imposta su true se vuoi lavori completamente in ufficio
+    ```yaml
+    # Preferenze di modalità di lavoro - tipi di accordi lavorativi che ti interessano
+    remote: true                # Imposta su true se vuoi lavori remoti
 
-   # Preferenze di livello di esperienza - quali fasi di carriera stai puntando
-   experience_level:
-     internship: true          # Posizioni temporanee di livello base per studenti/neolaureati
-     entry: true               # Posizioni per persone con 0-2 anni di esperienza
-     associate: true           # Posizioni per persone con 2-4 anni di esperienza
-     mid_senior_level: true    # Posizioni per persone con 5+ anni di esperienza
-     director: false           # Posizioni manageriali che supervisionano dipartimenti/team
-     executive: false          # Posizioni C-level e altre posizioni di leadership di alto livello
+    # Preferenze di livello di esperienza - quali fasi di carriera stai puntando
+    experience_level:
+      internship: true          # Posizioni temporanee di livello base per studenti/neolaureati
+      entry: true               # Posizioni per persone con 0-2 anni di esperienza
+      associate: true           # Posizioni per persone con 2-4 anni di esperienza
+      mid_senior_level: true    # Posizioni per persone con 5+ anni di esperienza
+      director: false           # Posizioni manageriali che supervisionano dipartimenti/team
+      executive: false          # Posizioni C-level e altre posizioni di leadership di alto livello
 
-   # Tipi di lavoro da considerare - accordi di impiego a cui sei aperto
-   job_types:
-     full_time: true           # Impiego a tempo pieno standard
-     contract: true            # Lavoro a contratto a tempo determinato
-     part_time: true           # Impiego part-time
-     temporary: true           # Posizioni temporanee a breve termine
-     internship: true          # Programmi di stage formali
-     other: true               # Altri accordi non standard
-     volunteer: true           # Posizioni di volontariato non retribuite
+    # Filtro per data degli annunci - quanto recenti devono essere gli annunci di lavoro
+    date:
+      all_time: false           # Qualsiasi annuncio di lavoro indipendentemente da quando è stato pubblicato
+      month: true               # Lavori pubblicati nell'ultimo mese
+      week: false               # Lavori pubblicati nell'ultima settimana
+      24_hours: false           # Lavori pubblicati nelle ultime 24 ore
 
-   # Filtro per data degli annunci - quanto recenti devono essere gli annunci di lavoro
-   date:
-     all_time: false           # Qualsiasi annuncio di lavoro indipendentemente da quando è stato pubblicato
-     month: true               # Lavori pubblicati nell'ultimo mese
-     week: false               # Lavori pubblicati nell'ultima settimana
-     24_hours: false           # Lavori pubblicati nelle ultime 24 ore
+    # Titoli/posizioni lavorative da cercare - ruoli specifici che ti interessano
+    positions:
+      - "Sviluppatore Software" # Elenca ogni titolo di lavoro che vuoi cercare
+      - "Sviluppatore Frontend"
+      - "Sviluppatore Full Stack"
+      - "Sviluppatore Web"
 
-   # Titoli/posizioni lavorative da cercare - ruoli specifici che ti interessano
-   positions:
-     - "Sviluppatore Software" # Elenca ogni titolo di lavoro che vuoi cercare
-     - "Sviluppatore Frontend"
-     - "Sviluppatore Full Stack"
-     - "Sviluppatore Web"
+    # Località in cui cercare - dove vuoi lavorare
+    locations:
+      - "Remote"                # Per posizioni completamente remote
+      - "Roma, Italia"          # Città e regione/provincia
+      - "Milano, Italia"        # Aggiungi tutte le località necessarie
 
-   # Località in cui cercare - dove vuoi lavorare
-   locations:
-     - "Remote"                # Per posizioni completamente remote
-     - "Roma, Italia"          # Città e regione/provincia
-     - "Milano, Italia"        # Aggiungi tutte le località necessarie
+    # Aziende da evitare - lista nera di aziende a cui non vuoi candidarti
+    company_blacklist:
+      - "Azienda Truffa Srl"    # Aziende che vuoi escludere dalla tua ricerca
+      - "Soluzioni MLM"
 
-   # Candidati solo una volta per azienda - impedisce candidature multiple alla stessa azienda
-   apply_once_at_company: true # Imposta su false se vuoi candidarti a più posizioni nella stessa azienda
+    # Titoli di lavoro da evitare - lista nera di titoli di lavoro per cui non vuoi candidarti
+    title_blacklist:
+      - "Rappresentante Vendite" # Titoli di lavoro che vuoi escludere dalla tua ricerca
+      - "Solo Commissioni"
 
-   # Distanza in miglia (0 per nessun limite) - quanto sei disposto a pendolare
-   distance: 0                 # Distanza massima di pendolarismo in miglia (0 = nessun limite)
-
-   # Aziende da evitare - lista nera di aziende a cui non vuoi candidarti
-   company_blacklist:
-     - "Azienda Truffa Srl"    # Aziende che vuoi escludere dalla tua ricerca
-     - "Soluzioni MLM"
-
-   # Titoli di lavoro da evitare - lista nera di titoli di lavoro per cui non vuoi candidarti
-   title_blacklist:
-     - "Rappresentante Vendite" # Titoli di lavoro che vuoi escludere dalla tua ricerca
-     - "Solo Commissioni"
-
-   # Località da evitare - lista nera di località in cui non vuoi lavorare
-   location_blacklist:
-     - "Località Irraggiungibile" # Località che vuoi escludere dalla tua ricerca
-   ```
+    # Località da evitare - lista nera di località in cui non vuoi lavorare
+    location_blacklist:
+      - "Località Irraggiungibile" # Località che vuoi escludere dalla tua ricerca
+    ```
 
 ### Configurazione LLM
 

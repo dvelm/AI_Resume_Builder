@@ -39,8 +39,6 @@ The job application automation can be configured through the `work_preferences.y
 ```yaml
 # Job search preferences
 remote: true
-hybrid: true
-onsite: false
 
 # Experience level preferences
 experience_level:

@@ -1,6 +1,4 @@
 remote: true
-hybrid: true
-onsite: true
 
 experience_level:
   internship: false
@@ -9,15 +7,6 @@ experience_level:
   mid_senior_level: true
   director: false
   executive: false
-
-job_types:
-  full_time: true
-  contract: false
-  part_time: false
-  temporary: true
-  internship: false
-  other: false
-  volunteer: true
 
 date:
   all_time: false
@@ -31,10 +20,6 @@ positions:
 locations:
   - Germany
 
-apply_once_at_company: true
-
-distance: 100
-
 company_blacklist:
   - wayfair
   - Crossover
@@ -45,4 +30,3 @@ title_blacklist:
 
 location_blacklist:
   - Brazil
-
