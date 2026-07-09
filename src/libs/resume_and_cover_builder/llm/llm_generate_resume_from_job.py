@@ -135,9 +135,7 @@ class LLMResumeJobDescription(LLMResumer):
 
         if self.resume.education_details:
             for edu in self.resume.education_details:
-                if edu.exam:
-                    for exam in edu.exam:
-                        skills.update(exam.keys())
+                pass
         prompt = ChatPromptTemplate.from_template(additional_skills_prompt_template)
         chain = prompt | self.llm_cheap | StrOutputParser()
         output = chain.invoke({

@@ -19,12 +19,6 @@ Act as an HR expert and resume writer with a specialization in creating ATS-frie
 1. **Institution Name and Location**: Specify the university or educational institution’s name and location.
 2. **Degree and Field of Study**: Clearly indicate the degree earned and the field of study.
 3. **Grade**: Include your Grade if it is strong and relevant.
-4. **Relevant Coursework**: List key courses with their grades to showcase your academic strengths. If no coursework is provided, omit this section from the template.
-
-To implement this, follow these steps:
-- If the exam details are not provided (i.e., `None`), skip the coursework section when filling out the template.
-- If the exam details are available, fill out the coursework section accordingly.
-
 
 - **My information:**  
   {education_details}
